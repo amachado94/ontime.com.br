@@ -8,7 +8,7 @@ class Devise::SessionsController < DeviseController
   def new
     self.resource = resource_class.new(sign_in_params)
     clean_up_passwords(resource)
-    respond_with(resource, serialize_options(resource), layout: 'login')
+    respond_with(resource, serialize_options(resource), layout: resource.is_a?(User) ? 'login' : 'application')
   end
 
   # POST /resource/sign_in
