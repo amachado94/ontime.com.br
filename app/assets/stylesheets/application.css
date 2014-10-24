@@ -1,0 +1,32 @@
+/*
+ *= require bootstrap
+ *= require_self
+ */
+
+#page-session {
+	padding: 10px 0;
+	background-color: #125e96;
+	color: white;
+}
+
+#page-footer {
+	padding: 15px 0;
+	background-color: #0c3f64;
+	color: white;
+}
+
+#page-footer .footer-back a, 
+#page-footer .footer-back a:hover,
+#page-footer .footer-back a:focus {
+	color: white;
+}
+
+#login-box {
+  width: 320px;
+  margin: 100px auto;
+}
+
+.icon-mr { margin-right: 6px }
+.icon-ml { margin-left: 6px }
+.btn-mr { margin-right: 15px }
+.btn-ml { margin-left: 15px }

@@ -1,0 +1,30 @@
+doctype html
+html lang="pt-br"
+  head
+		meta name="charset" content="utf-8"
+		= yield :head
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+		link rel="shortcut icon" href="/assets/favicon.ico"
+  
+	body
+		#page
+			#page-session
+				.container
+					.row
+						.col-xs-12.col-sm-6.col-md-6
+							span Curitiba, #{l(Date.today, format: :long)}
+						.col-xs-12.col-sm-6.col-md-6
+							span #{current_user}
+							span  |
+							span 
+								i.icon.icon-off.icon-mr
+								span Sair
+			#page-header
+				#page-nav
+			#page-content= yield
+			#page-footer
+				.footer-back
+		
+		= javascript_include_tag 'application'
+		= yield :script
